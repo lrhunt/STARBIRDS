@@ -1,0 +1,57 @@
+import matplotlib.pyplot as plt
+from astropy.io import fits
+from astropy.wcs import WCS
+hdu=fits.open('M81DWA_NA_X0_P_R.FITS')
+wcs=WCS(hdu.header)
+hdu=fits.open('M81DWA_NA_X0_P_R.FITS')[0]
+wcs=WCS(hdu.header)
+ax=plt.subplot(projection=wcs)
+hdu.header['NAXIS']
+hdu.header['CRVAL4']
+hdu.header['NAXIS']=2
+ax=plt.subplot(projection=wcs)
+wcs=WCS(hdu.header)
+ax=plt.subplot(projection=wcs)
+hdu=fits.open('M81DWA_NA_X0_P_R_mod.FITS')[0]
+wcs=WCS(hdu.header)
+ax=plt.subplot(projection=wcs)
+hdu.header['NAXIS']
+hdu=fits.open('M81DWA_NA_X0_P_R.FITS')[0]
+hdu.header['NAXIS']
+hdu.header['NAXIS']=2
+hdu.header
+hdu.header['NAXIS4']
+del hdu.header['NAXIS4']
+del hdu.header['NAXIS3']
+wcs=WCS(hdu.header)
+wcs=WCS(hdu.header)
+fig=plt.figure()
+fig.add_subplot(111,projection=wcs)
+wcs.naxis
+wcs
+wcs.CTYPE
+hdu.header
+hdu.header['NAXIS']
+hdu.header['NAXIS3']
+hdu.header['CRDELT3']
+hdu.header['CROTA3']
+del hdu.header['CROTA3']
+del hdu.header['CROTA4']
+del hdu.header['CRPIX4']
+hdu.header
+del hdu.header['CDELT3']
+wcs=WCS(hdu.header)
+wcs
+fig.add_subplot(111,projection=wcs)
+ax = plt.subplot(projection=wcs)
+ax.imshow(hdu.data,vmin=-2.e-5,vmax=2.e-4,origin='lower')
+hdu.data
+hdu.data[0]
+hdu.data[0][0]
+ax.imshow(hdu.data[0][0],vmin=-2.e-5,vmax=2.e-4,origin='lower')
+plt.show()
+ax = plt.subplot(projection=wcs)
+ax.imshow(hdu.data[0][0])
+ax.contour(hdu.data[0][0],colors='white',alpha=0.5)
+plt.show()
+history
